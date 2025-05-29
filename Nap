@@ -1,0 +1,3 @@
+$date = Get-Date -Format "dddd"
+$path = "C:\Mentés\$date"
+New-Item -ItemType Directory -Path $path
