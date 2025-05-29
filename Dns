@@ -1,0 +1,14 @@
+Friss csomaginformációk beszerzése:
+sudo apt update
+DNS szerver csomag telepítése:
+sudo apt install bind9
+DNS szerver beállítása primary server üzemmódban
+A következő beállítások az oktatas.hu tartományhoz készülnek.
+A /etc/bind/named.conf.local fájl szerkesztése, hogy meghatározzuk a forward zone
+fájlt:
+zone "oktatas.hu" {
+type master;
+file "/etc/bind/db.oktatas.hu";
+};
+A /etc/bind/db.example.com fájlt használjuk mintaként:
+sudo cp /etc/bind/db.local /etc/bind/db.oktatas.h
